@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gamebodyAll {
+    height: 100% auto;
+    background: #293462; /* Fallback for older browsers */
+    background: -webkit-linear-gradient( #293462, white ,#293462);
+    background: linear-gradient(#293462, white ,#293462); /*chrome 10-25 , safari 5.1-6*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+}
+
+.gameBodyWest{
+    height: 100% auto;
+    background: #293462; /* Fallback for older browsers */
+    background: -webkit-linear-gradient( yellow, white ,#293462);
+    background: linear-gradient(yellow, white ,#293462); /*chrome 10-25 , safari 5.1-6*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+}
+
+.gameBodyEast{
+    height: 100% auto;
+    background: #293462; /* Fallback for older browsers */
+    background: -webkit-linear-gradient( #293462, white ,#293462);
+    background: linear-gradient(crimson, white ,#293462); /*chrome 10-25 , safari 5.1-6*/
+    display: inline-flex;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 2.5rem;
+    font-family: 'candara', sans-serif;
+    font-style: bold;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20rem;
+}
+
+.NBA {
+    color: black;
+    font-size: 3rem;
+    font-weight: 900;
+    background-image: linear-gradient(black, white ,blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 1rem;
+}
+
+h1{
+    margin-left: 5rem;
+    margin-bottom: 5px;
+}
+
+.gameBlock {
+    display: grid;
+    grid-template-columns: repeat(10, 6rem);
+    grid-template-rows: repeat(6, 6rem);
+    grid-gap: 1rem;
+    perspective: 800px;
+    margin-left: 5rem;
+    margin-right: 0;
+    margin-top: 1rem;
+}
+
+.gameBlockEastWest {
+    display: grid;
+    grid-template-columns: repeat(10, 6rem);
+    grid-template-rows: repeat(4, 6rem);
+    grid-gap: 1rem;
+    perspective: 800px;
+    margin-left: 5rem;
+    margin-right: 0;
+    margin-top: 1rem;
+}
+
+
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.face, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* needed to turn face cards image to not be inverted thus the reason for '-180deg rotation*/
+.face {
+    transform: rotateY(-180deg);
+}
+
+/* inserting the background image of the NBA logo*/
+.back{
+    background: white;
+    background-image: url("./images/NBA.png");
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 99%;
+}
+
+.toggleCard{
+    transform: rotateY(180deg);
+}
+/* player option */
+.options {
+    border-radius: 0.5rem;
+    display: flex;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'candara', sans-serif;
+    font-style: bold;
+    font-weight: 900;
+    background-image: linear-gradient(red, black ,red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    justify-content: center;
+    align-items: center;
+    padding-left: 31rem;
+    margin-top: 1rem;
+}
+
+a:link, a:visited {
+    background-color: #293462;
+    background: white; /* Fallback for older browsers */
+    background: -webkit-radial-gradient( red, white ,#293462);
+    background: radial-gradient(red, white ,#293462); /*chrome 10-25 , safari 5.1-6*/
+    color: rgb(0, 0, 0);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    border-radius: 0.5rem;
+    margin-left: 31rem;
+    font-weight: 900;
+}
+
+a:hover, a:active {
+    opacity: 0.75;
+    background-color: red;
+  }
+
+/*link image espn logo*/
+#espnLogo{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: relative;
+    display: block;
+    rotate: 0;
+    z-index: -1;
+    object-fit: fill;
+    height: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
