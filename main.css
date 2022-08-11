@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.gamebodyAll {
+.gameBodyAll {
     height: 100% auto;
     background: #293462; /* Fallback for older browsers */
     background: -webkit-linear-gradient( #293462, white ,#293462);
